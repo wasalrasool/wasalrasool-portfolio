@@ -1,0 +1,7 @@
+.not-found {
+  margin-top: 20vmax;
+  margin-bottom: 15vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

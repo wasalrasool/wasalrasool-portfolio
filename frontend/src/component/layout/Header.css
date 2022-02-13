@@ -1,0 +1,33 @@
+nav li {
+  list-style: none;
+  padding: 0.5vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav li > a {
+  text-decoration: none;
+}
+nav {
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  left: 0%;
+  display: flex;
+  padding: 0.7vmax;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 12vmax;
+  padding-left: 12vmax;
+  background-color: rgba(24, 22, 22, 0.15);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+.links {
+  display: flex;
+  width: auto;
+  justify-content: center;
+}
+li:hover button {
+  background-color: rgba(245, 245, 245, 0.267);
+}

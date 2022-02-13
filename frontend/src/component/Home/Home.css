@@ -1,0 +1,308 @@
+.cover {
+  padding-top: 7vmax;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1vmax;
+  margin-left: 12vmax;
+  margin-right: 12vmax;
+  align-items: center;
+}
+.cover-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.a-1 {
+  font-size: 22px;
+  position: relative;
+  top: 4.3rem;
+  left: 3.25rem;
+}
+.a-2 > h3 {
+  font-size: 220px;
+  font-weight: 400;
+}
+.a-3 {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a-3 > img {
+  padding: 5px;
+  width: 2vmax;
+}
+.laptop-svg {
+  transform: scale(2);
+  transition: 0.5s all ease;
+}
+.blue-btn,
+.dark-blue-btn {
+  margin: 1vmax;
+  margin-top: 4vmax;
+  width: auto;
+}
+
+/* ABOUT SECTION */
+.about {
+  margin-left: 12vmax;
+  margin-right: 12vmax;
+  margin-top: 4vmax;
+  padding: 1vmax;
+  display: flex;
+  justify-content: space-between;
+}
+.about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40vmax;
+  flex-wrap: wrap;
+  padding-right: 2vmax;
+}
+h6 {
+  font-size: large;
+}
+.about p {
+  padding-top: 10px;
+  font-size: 20px;
+  word-spacing: 3px;
+  line-height: 36px;
+}
+.about-me div {
+  padding: 0.6vmax;
+}
+.featured-work {
+  width: 68vmax;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.featured-work div {
+  padding-top: 0.6vmax;
+}
+.featured-work .project-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Form CSS */
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 12vmax;
+  margin-right: 12vmax;
+  padding: 1vmax;
+  margin-top: 3vmax;
+}
+.form-div {
+  display: flex;
+  align-items: center;
+  width: 40vmax;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vmax;
+}
+input {
+  /* display: block; */
+  padding: 15px;
+  width: 37vmax;
+  border-radius: 7px;
+  background-color: rgba(62, 65, 65, 0.658);
+  margin-top: 1vmax;
+  border: none;
+  font-family: "Roboto";
+}
+input:focus {
+  outline: none;
+}
+textarea:focus {
+  outline: none;
+}
+textarea {
+  padding: 10px;
+  width: 37.5vmax;
+  border-radius: 10px;
+  background-color: rgba(62, 65, 65, 0.658);
+  margin-top: 1vmax;
+  border: none;
+  height: 150px;
+  resize: none;
+  font-family: "Roboto";
+}
+.message-text::-webkit-scrollbar {
+  display: none;
+}
+input[type="submit"] {
+  transition: 0.2s all ease;
+  background-color: #4595eb;
+  color: black;
+  font-weight: 700;
+  font-size: 15px;
+  width: 39vmax;
+}
+input[type="submit"]:hover {
+  transform: scale(1.04);
+}
+.contact h5 {
+  /* margin-left: 32vmax; */
+  font-size: 19px;
+}
+.mail-man-svg {
+  margin-top: 3vmax;
+}
+
+/* Media Queries --> Responsiveness */
+
+@media screen and (max-width: 1100px) {
+  .cover {
+    flex-direction: column;
+  }
+  .cover-right {
+    margin-top: 20vmax;
+  }
+  .laptop-svg {
+    transform: scale(1.6);
+  }
+  .a-3 > img {
+    width: 4vmax;
+    padding: 10px;
+  }
+  .blue-btn,
+  .dark-blue-btn {
+    margin: 1vmax;
+    width: auto;
+    height: 5.2vmax;
+  }
+  .about {
+    padding-top: 17vmax;
+    flex-direction: column;
+  }
+  .about-me {
+    width: 100%;
+  }
+  .featured-work .project-cards {
+    padding-top: 14px;
+  }
+  .about .featured-work {
+    padding-top: 2vmax;
+    width: 100%;
+  }
+  .project-cards {
+    justify-content: center;
+  }
+
+  .contact {
+    align-items: center;
+    width: 74vmax;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  input,
+  textarea {
+    width: 50vmax;
+    /* transform: scale(1.1); */
+  }
+  .mail-man-svg {
+    transform: scale(1.9);
+    transition: 0.3s all ease;
+    margin-top: 14vmax;
+    margin-bottom: 14vmax;
+  }
+  .svg-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contact {
+    width: 55vmax;
+  }
+  input,
+  textarea {
+    width: 40vmax;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cover {
+    margin-left: 0vmax;
+    margin-right: 0vmax;
+    /* margin-left: vmax; */
+    width: 70vmax;
+    padding-left: 1vmax;
+  }
+  .a-1 {
+    font-size: 22px;
+    position: relative;
+    top: 5rem;
+    left: 0.5rem;
+  }
+  .a-2 > h3 {
+    font-size: 170px;
+    font-weight: 400;
+    margin-top: 70px;
+    width: 490px;
+  }
+  .laptop-svg {
+    transform: scale(1.2);
+  }
+  .about {
+    width: 49vmax;
+  }
+  .about-me p {
+    width: 350px;
+    padding-top: 1vmax;
+  }
+  .project-cards {
+    width: 60vmax;
+    padding: 0;
+  }
+  .project-card {
+    width: 20rem;
+  }
+
+  input,
+  textarea {
+    font-size: 20px;
+  }
+  .contact h5 {
+    font-size: 30px;
+  }
+  h6 {
+    font-size: 30px;
+  }
+  .about-me p {
+    font-size: 23px;
+  }
+  button {
+    font-size: 20px;
+  }
+
+  .about {
+    padding-top: 5vmax;
+  }
+  .a-4 button {
+    height: 45px;
+  }
+  input {
+    width: 40vmax;
+  }
+  input[type="submit"] {
+    width: 100%;
+  }
+  textarea {
+    width: 94%;
+  }
+  .mail-man-svg {
+    transform: scale(1.9);
+    transition: 0.3s all ease;
+    margin-top: 14vmax;
+    margin-bottom: 14vmax;
+  }
+}

@@ -1,0 +1,11 @@
+.hero-svg2 {
+  fill: #4595eb;
+}
+.mail-man-svg {
+  width: 25vmax;
+}
+@media screen and (max-width: 1100) {
+  .mail-man-svg {
+    width: 35vmax;
+  }
+}

@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: #b9b9b9;
+  letter-spacing: 2px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto";
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
+}
+:root {
+  --primary: rgb(6, 6, 180);
+}
+.white-content {
+  background: whitesmoke;
+  transition: 0.5s all ease;
+  color: black;
+}
+.dark-content {
+  background: black;
+  transition: 0.5s all ease;
+  color: white;
+}
+.dark-btn-text {
+  color: black;
+}
+
+.light-btn-text {
+  color: white;
+}
+
+/* Button */
+button {
+  padding: 1vmax;
+  background: none;
+  border: none;
+  transition: 0.5s all ease;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  color: #b9b9b9;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+/* svg */
+svg {
+  /* cursor: pointer; */
+}
+
+/* butns */
+.blue-btn {
+  background-color: #4595eb;
+  color: #0e1b2e;
+  width: 9vmax;
+  margin-top: 3vmax;
+}
+.dark-blue-btn {
+  background-color: #0e1b2e;
+  color: #4595eb;
+  width: 9vmax;
+  margin-top: 3vmax;
+}
+
+span {
+  color: #4595eb;
+}

@@ -1,19 +1,45 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faL } from "@fortawesome/free-solid-svg-icons";
 
 import "./Header.css";
 
 const Header = () => {
+  const toggler = useRef(null);
+  const logo = useRef(null);
+  const menuBar = useRef(null);
+  const [toggle, setToggle] = useState(true);
+
+  const navToggler = (e) => {
+    if (toggle === true) {
+      toggler.current.classList.add("show-links");
+      logo.current.classList.add("remove-logo");
+      menuBar.current.classList.remove("menu-bar-position");
+    } else {
+      toggler.current.classList.remove("show-links");
+      logo.current.classList.remove("remove-logo");
+      menuBar.current.classList.add("menu-bar-position");
+    }
+
+    toggle ? setToggle(false) : setToggle(true);
+  };
   return (
     <Fragment>
-      <nav>
+      <nav className="nav">
         <div className="LogoBox">
-          <div className="logo">
+          <div ref={logo} className="logo">
             {/* <img src="./wasal-logo-text.png" alt="Wasal Rasool" /> */}
-            WASAL RASOOL
+            <h1>WASAL RASOOL</h1>
           </div>
         </div>
-        <div className="links">
+        <div ref={menuBar} className="menu-bar menu-bar-position">
+          <button onClick={(e) => navToggler(e)}>
+            {" "}
+            <FontAwesomeIcon icon={faBars} size="2x" />
+          </button>
+        </div>
+        <div ref={toggler} className="links">
           <li>
             <Link to="/">
               <button>Home</button>

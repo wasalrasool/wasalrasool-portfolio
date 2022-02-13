@@ -31,3 +31,47 @@ nav {
 li:hover button {
   background-color: rgba(245, 245, 245, 0.267);
 }
+.menu-bar {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  nav {
+    padding-left: 1vmax;
+    padding-right: 1vmax;
+  }
+}
+@media screen and (max-width: 900px) {
+  .links {
+    display: none;
+  }
+  .menu-bar {
+    display: block;
+    cursor: pointer;
+    align-self: flex-end;
+    border-radius: 4px;
+  }
+  nav {
+    padding: 6vmax 7vmax 0;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .logo h1 {
+    font-size: 19px;
+    font-weight: 300;
+    font-family: "Roboto";
+    margin-right: 28vmax;
+    width: 26vmax;
+  }
+  .show-links {
+    display: block;
+    transition: 0.5s all ease;
+  }
+  .menu-bar-position {
+    position: relative;
+    bottom: 2.5rem;
+  }
+  .remove-logo {
+    display: none;
+  }
+}

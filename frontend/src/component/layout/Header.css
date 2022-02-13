@@ -22,7 +22,7 @@ nav {
   background-color: rgba(24, 22, 22, 0.15);
   backdrop-filter: blur(10px);
   z-index: 100;
-  transition: 0.3s all ease;
+  transition: 0.6s all ease;
 }
 .logo h1 {
   font-weight: 300;

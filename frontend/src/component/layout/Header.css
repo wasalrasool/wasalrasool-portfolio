@@ -22,6 +22,14 @@ nav {
   background-color: rgba(24, 22, 22, 0.15);
   backdrop-filter: blur(10px);
   z-index: 100;
+  transition: 0.3s all ease;
+}
+.logo h1 {
+  font-weight: 300;
+  word-spacing: 3px;
+  letter-spacing: 4px;
+  border-bottom: 1px solid white;
+  padding: 1vmax;
 }
 .links {
   display: flex;
@@ -32,7 +40,9 @@ li:hover button {
   background-color: rgba(245, 245, 245, 0.267);
 }
 .menu-bar {
-  display: none;
+  /* display: none; */
+  transform: translateX(-100vmax);
+  transition: 0.3s all ease;
 }
 
 @media screen and (max-width: 1100px) {
@@ -43,16 +53,20 @@ li:hover button {
 }
 @media screen and (max-width: 900px) {
   .links {
-    display: none;
+    /* display: none; */
+    transform: translateX(-100vmax);
+    transition: 0.3s all ease;
   }
   .menu-bar {
-    display: block;
+    /* display: block; */
+    transform: translateX(0%);
     cursor: pointer;
     align-self: flex-end;
     border-radius: 4px;
   }
   nav {
-    padding: 6vmax 7vmax 0;
+    padding: 0vmax 7vmax;
+    padding-top: 3vmax;
     justify-content: center;
     flex-direction: column;
   }
@@ -61,10 +75,11 @@ li:hover button {
     font-weight: 300;
     font-family: "Roboto";
     margin-right: 28vmax;
-    width: 26vmax;
+    width: 32vmax;
   }
   .show-links {
     display: block;
+    transform: translateX(0%);
     transition: 0.5s all ease;
   }
   .menu-bar-position {

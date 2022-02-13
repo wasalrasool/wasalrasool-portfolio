@@ -46,8 +46,10 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="/contact">
-              <button>Contact</button>
+            <Link to="/#contact">
+              <button onClick={() => window.location.replace("/#contact")}>
+                Contact
+              </button>
             </Link>
           </li>
           <li>
@@ -56,12 +58,15 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a href="url">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/wasal-rasool-6b35971ba/"
+            >
               <button>Linkedin</button>
             </a>
           </li>
           <li>
-            <a href="url">
+            <a target="_blank" href="https://github.com/wasalrasool">
               <button>GitHub</button>
             </a>
           </li>

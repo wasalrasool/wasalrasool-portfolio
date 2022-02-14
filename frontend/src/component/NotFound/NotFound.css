@@ -1,7 +1,16 @@
 .not-found {
-  margin-top: 20vmax;
+  margin-top: 13vmax;
   margin-bottom: 15vmax;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+img {
+  width: 29vmax;
+}
+@media screen and (max-width: 900px) {
+  .not-found {
+    margin-top: 17vmax;
+  }
 }

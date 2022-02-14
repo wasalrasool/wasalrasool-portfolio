@@ -4,7 +4,14 @@ const NotFound = () => {
   return (
     <Fragment>
       <div className="not-found">
-        <h6>NotFound | 404 Error.</h6>{" "}
+        <div>
+          <img src="./404.png" alt="Mechanic Image" />
+        </div>
+        <div>
+          <p>
+            Page not found | Broken <span>link</span>
+          </p>
+        </div>
       </div>
     </Fragment>
   );

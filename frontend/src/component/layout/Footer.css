@@ -1,5 +1,4 @@
 .footer {
-  /* padding: 1vmax; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +18,7 @@
 }
 .footer-left p {
   font-size: small;
-  font-weight: 200;
+  font-weight: 300;
 }
 .footer-right div {
   margin-top: 2vmax;
@@ -45,6 +44,11 @@
   display: flex;
   padding-bottom: 0.2rem;
   transform: scale(1.13);
+}
+@media screen and (max-width: 900px) {
+  .footer {
+    margin-top: 13vmax;
+  }
 }
 @media screen and (max-width: 600px) {
   section {

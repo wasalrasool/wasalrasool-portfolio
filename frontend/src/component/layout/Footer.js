@@ -19,26 +19,33 @@ const Footer = () => {
         <div className="social-icons">
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.linkedin.com/in/wasal-rasool-6b35971ba/"
           >
             <img src="./linkedin-icon.svg" alt="LINKED IN" />
           </a>
-          <a target="_blank" href="needed">
+          <a target="_blank" rel="noreferrer" href="needed">
             <img src="./instagram-icon.svg" alt="INTAGRAM" />
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             href="//api.whatsapp.com/send?phone=923094775474&text=Hello, we are one step ahead to get in touch"
           >
             {" "}
             <img src="./whatsapp-icon.svg" alt="WHATSAPP" />
           </a>
-          <a target="_blank" href="https://github.com/wasalrasool">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/wasalrasool"
+          >
             {" "}
             <img src="./github-icon.png" alt="GITHUB" />
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             href="mailto:wasalrasool37@gmail.com"
             className="mail-icon"
           >

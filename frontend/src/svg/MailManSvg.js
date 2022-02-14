@@ -8,7 +8,6 @@ const MailManSvg = () => {
         id="94c1f45f-2d92-458e-bbfe-f6c69da92e14"
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
-        xmlns="http://www.w3.org/1999/xlink"
         width="100%"
         height="auto"
         viewBox="0 0 1034.95 831.61"

@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faL } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 import "./Header.css";
 
@@ -60,13 +60,18 @@ const Header = () => {
           <li>
             <a
               target="_blank"
+              rel="noreferrer"
               href="https://www.linkedin.com/in/wasal-rasool-6b35971ba/"
             >
               <button>Linkedin</button>
             </a>
           </li>
           <li>
-            <a target="_blank" href="https://github.com/wasalrasool">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/wasalrasool"
+            >
               <button>GitHub</button>
             </a>
           </li>

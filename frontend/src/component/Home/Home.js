@@ -1,11 +1,14 @@
 import React, { Fragment, useState } from "react";
 import LaptopManSvg from "../../svg/LaptopManSvg.js";
 import ProjectCard from "../Project/ProjectCard.js";
+import { useDispatch, useSelector } from "react-redux";
 import MailManSvg from "../../svg/MailManSvg.js";
 
 import "./Home.css";
 
 const Home = () => {
+  const {} = useSelector();
+
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactMessage, setContactMessage] = useState("");

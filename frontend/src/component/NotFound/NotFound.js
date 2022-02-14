@@ -5,7 +5,7 @@ const NotFound = () => {
     <Fragment>
       <div className="not-found">
         <div>
-          <img src="./404.png" alt="Mechanic Image" />
+          <img src="./404.png" alt="Mechanic" />
         </div>
         <div>
           <p>

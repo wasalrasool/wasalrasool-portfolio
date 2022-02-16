@@ -11,10 +11,10 @@ export const projectSlice = createSlice({
   reducers: {
     getProjects: async (state) => {
       try {
-        const { data } = await axios.get("/api/v1/projects");
-        const projects = data.projects;
-        console.log(projects);
-        state.projects.push(projects);
+        // const { data } = await axios.get("/api/v1/projects");
+        // const projects = data.projects;
+        // console.log(projects);
+        // state.projects.push(projects);
       } catch (error) {
         console.log("BACKEND", error);
       }
@@ -24,7 +24,7 @@ export const projectSlice = createSlice({
 
 export const { getProjects } = projectSlice.actions;
 
-// official documentation okkk hai
+// official documentation okkk hai.
 
 // const fetchProjects = () => async (dispatch) => {
 //   dispatch(usersLoading())

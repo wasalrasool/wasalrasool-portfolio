@@ -4,7 +4,7 @@ import ProjectCard from "../Project/ProjectCard.js";
 import { useDispatch, useSelector } from "react-redux";
 import MailManSvg from "../../svg/MailManSvg.js";
 import { fetchProjects } from "../../features/projectSlice";
-
+import Particles from "react-particles-js";
 import "./Home.css";
 
 const Home = () => {
@@ -76,7 +76,11 @@ const Home = () => {
           <div className="cover-right">
             <LaptopManSvg />
           </div>
+          <div className="background-text">
+            &lt;&lt;&lt;Developer&gt;&gt;&gt;
+          </div>
         </section>
+
         <section className="about">
           <div className="about-me">
             <div>
@@ -155,6 +159,19 @@ const Home = () => {
             </form>
           </div>
         </section>
+        <Particles
+          params={{
+            particles: {
+              number: {
+                value: 200,
+                density: {
+                  enable: true,
+                  value_area: 1000,
+                },
+              },
+            },
+          }}
+        />
       </div>
     </Fragment>
   );

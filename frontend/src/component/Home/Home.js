@@ -8,13 +8,18 @@ import { fetchProjects } from "../../features/projectSlice";
 import "./Home.css";
 
 const Home = () => {
-  // const { projects } = useSelector((state) => state.projects);
+  const { projects } = useSelector((state) => state.projects.data);
+  const { loading } = useSelector((state) => state.projects);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchProjects());
   }, [dispatch]);
+
+  // fetched the projects -- ok
+
+  // need to render 4
 
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
@@ -93,10 +98,8 @@ const Home = () => {
               </h6>
             </div>
             <div className="project-cards">
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+              {projects &&
+                projects.map((project) => <ProjectCard project={project} />)}
             </div>
           </div>
         </section>

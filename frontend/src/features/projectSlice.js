@@ -1,23 +1,36 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { HTTP_STATUS } from "../constansts/projectConstants";
+
+export const fetchProjects = createAsyncThunk(
+  `projects/fetchProjects`,
+  async () => {
+    const { data } = await axios.get("/api/v1/projects");
+    return data;
+  }
+);
 
 let initialState = {
-  projects: [],
+  loading: null,
+  data: null,
 };
 
-export const projectSlice = createSlice({
+const projectSlice = createSlice({
   name: "projects",
   initialState,
   reducers: {
-    getProjects: async (state) => {
-      try {
-        // const { data } = await axios.get("/api/v1/projects");
-        // const projects = data.projects;
-        // console.log(projects);
-        // state.projects.push(projects);
-      } catch (error) {
-        console.log("BACKEND", error);
-      }
+    // getProjects: async (state) => {},
+  },
+  extraReducers: {
+    [fetchProjects.pending]: (state) => {
+      state.loading = HTTP_STATUS.PENDING;
+    },
+    [fetchProjects.fulfilled]: (state, actions) => {
+      state.loading = HTTP_STATUS.FULFILLED;
+      state.data = actions.payload;
+    },
+    [fetchProjects.rejected]: (state) => {
+      state.loading = HTTP_STATUS.REJECTED;
     },
   },
 });

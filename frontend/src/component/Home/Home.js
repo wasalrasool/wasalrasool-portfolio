@@ -3,17 +3,17 @@ import LaptopManSvg from "../../svg/LaptopManSvg.js";
 import ProjectCard from "../Project/ProjectCard.js";
 import { useDispatch, useSelector } from "react-redux";
 import MailManSvg from "../../svg/MailManSvg.js";
-import { getProjects } from "../../features/projectSlice";
+import { fetchProjects } from "../../features/projectSlice";
 
 import "./Home.css";
 
 const Home = () => {
-  const { projects } = useSelector((state) => state.projects);
+  // const { projects } = useSelector((state) => state.projects);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getProjects());
+    dispatch(fetchProjects());
   }, [dispatch]);
 
   const [contactName, setContactName] = useState("");

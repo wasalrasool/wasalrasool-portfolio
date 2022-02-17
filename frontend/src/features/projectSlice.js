@@ -6,13 +6,13 @@ export const fetchProjects = createAsyncThunk(
   `projects/fetchProjects`,
   async () => {
     const { data } = await axios.get("/api/v1/projects");
-    return data;
+    return data.projects;
   }
 );
 
 let initialState = {
   loading: null,
-  data: null,
+  projects: null,
 };
 
 const projectSlice = createSlice({
@@ -27,10 +27,10 @@ const projectSlice = createSlice({
     },
     [fetchProjects.fulfilled]: (state, actions) => {
       state.loading = HTTP_STATUS.FULFILLED;
-      state.data = actions.payload;
+      state.projects = actions.payload;
     },
     [fetchProjects.rejected]: (state) => {
-      state.loading = HTTP_STATUS.REJECTED;
+      state.projects = HTTP_STATUS.REJECTED;
     },
   },
 });

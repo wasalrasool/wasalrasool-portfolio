@@ -8,14 +8,16 @@ import { fetchProjects } from "../../features/projectSlice";
 import "./Home.css";
 
 const Home = () => {
-  const { projects } = useSelector((state) => state.projects.data);
-  const { loading } = useSelector((state) => state.projects);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchProjects());
+    // const { loading } = useSelector((state) => state.projects);
   }, [dispatch]);
+
+  // only thing i understood dont use useEffect twice
+  // instea make the state slice lie that to be able to select
+  const { projects, loading } = useSelector((state) => state.projects);
 
   // fetched the projects -- ok
 

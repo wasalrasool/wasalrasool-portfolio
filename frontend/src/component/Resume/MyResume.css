@@ -22,7 +22,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 7vmax;
+  margin-top: 3vmax;
+  margin-bottom: 7vmax;
 }
 .download-icon {
   color: black;

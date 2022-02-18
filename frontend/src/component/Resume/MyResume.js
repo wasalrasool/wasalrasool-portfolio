@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import FileDownload from "js-file-download";
 import "./MyResume.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -34,6 +35,9 @@ const MyResume = () => {
           <FontAwesomeIcon className="download-icon" icon={faDownload} />{" "}
           Download Resume
         </button>
+        {/* <Link to="/resume.pdf" target="_blank" download>
+          Download
+        </Link> */}
       </div>
     </Fragment>
   );

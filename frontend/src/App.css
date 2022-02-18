@@ -15,16 +15,7 @@ body {
 :root {
   --primary: rgb(6, 6, 180);
 }
-.white-content {
-  background: whitesmoke;
-  transition: 0.5s all ease;
-  color: black;
-}
-.dark-content {
-  background: black;
-  transition: 0.5s all ease;
-  color: white;
-}
+
 .dark-btn-text {
   color: black;
 }

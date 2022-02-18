@@ -39,11 +39,6 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* svg */
-svg {
-  /* cursor: pointer; */
-}
-
 /* butns */
 .blue-btn {
   background-color: #4595eb;

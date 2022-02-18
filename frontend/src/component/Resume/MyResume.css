@@ -10,7 +10,11 @@
   font-size: 10vmax;
   font-weight: 300;
 }
-.blue-btn {
+.blue-c-btn {
+  background-color: #4595eb;
+  color: #0e1b2e;
+  /* width: 9vmax; */
+  margin-top: 3vmax;
   width: 300px;
   height: 57px;
 }

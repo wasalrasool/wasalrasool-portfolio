@@ -26,7 +26,7 @@ const MyResume = () => {
       </div>
       <div className="download">
         <button
-          className="blue-btn"
+          className="blue-c-btn"
           onClick={(e) => {
             downloadHandler(e);
           }}

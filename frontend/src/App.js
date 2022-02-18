@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch } from "react-router-dom";
 import { Route } from "react-router-dom";
 import Home from "./component/Home/Home";
 import NotFound from "./component/NotFound/NotFound.js";
+import MyResume from "./component/Resume/MyResume.js";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/myresume" component={MyResume} />
         <Route component={NotFound} />
       </Switch>
       <Footer />

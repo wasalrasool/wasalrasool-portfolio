@@ -1,0 +1,46 @@
+.my-resume {
+  margin-top: 10vmax;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 7vmax;
+  margin-right: 7vmax;
+}
+.my-resume h6 {
+  font-size: 10vmax;
+  font-weight: 300;
+}
+.blue-btn {
+  width: 300px;
+  height: 57px;
+}
+.download {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7vmax;
+}
+.download-icon {
+  color: black;
+  margin-right: 7px;
+}
+@media screen and (max-width: 900px) {
+  .my-resume {
+    margin-top: 24vmax;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .my-resume {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .download {
+    margin-left: 10vmax;
+  }
+  .blue-btn {
+    height: 78px;
+  }
+}

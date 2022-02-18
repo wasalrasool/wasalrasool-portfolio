@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import LaptopManSvg from "../../svg/LaptopManSvg.js";
+import { Link } from "react-router-dom";
 import ProjectCard from "../Project/ProjectCard.js";
 import { useDispatch, useSelector } from "react-redux";
 import MailManSvg from "../../svg/MailManSvg.js";
@@ -72,7 +73,10 @@ const Home = () => {
               <a href="#contact">
                 <button className="blue-btn">Contact</button>
               </a>
-              <button className="dark-blue-btn">View Resume</button>
+              <Link to="/myresume">
+                {" "}
+                <button className="dark-blue-btn">View Resume</button>
+              </Link>
             </div>
           </div>
           <div className="cover-right">

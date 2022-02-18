@@ -176,6 +176,9 @@ input[type="submit"]:hover {
 /* Media Queries --> Responsiveness */
 
 @media screen and (max-width: 1100px) {
+  .home {
+    margin-top: 4vmax;
+  }
   .cover {
     flex-direction: column;
   }

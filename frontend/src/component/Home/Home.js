@@ -3,14 +3,20 @@ import LaptopManSvg from "../../svg/LaptopManSvg.js";
 import { Link } from "react-router-dom";
 import ProjectCard from "../Project/ProjectCard.js";
 import { useDispatch, useSelector } from "react-redux";
+// import { useAlert } from "react-alert";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import MailManSvg from "../../svg/MailManSvg.js";
 import { fetchProjects } from "../../features/projectSlice";
 import Particles from "../../particles/Particles.js";
-// import Particles from "react-particles-js";
+import axios from "axios";
 import "./Home.css";
 
 const Home = () => {
   const dispatch = useDispatch();
+  // const alert = useAlert();
+  // alert.show("HELOOO");
+  const notify = () => toast("Wow so easy !");
 
   useEffect(() => {
     dispatch(fetchProjects());
@@ -22,8 +28,6 @@ const Home = () => {
   const { projects, loading } = useSelector((state) => state.projects);
 
   // fetched the projects -- ok
-
-  // need to render 4
 
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
@@ -38,7 +42,39 @@ const Home = () => {
     myForm.set("email", contactEmail);
     myForm.set("message", contactMessage);
 
-    // need to dispatch the sendEmail and send myForm in it
+    const config = {
+      headers: { "content-type": "multipart/form-data" },
+    };
+    const url = "/api/v1/sendemail";
+
+    axios
+      .post(url, myForm, config)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        // console.log(error);
+      });
+
+    toast.success("Email sent successfully", {
+      position: toast.POSITION.BOTTOM_CENTER,
+    });
+    toast.info("You can check your inbox for confirmation", {
+      position: toast.POSITION.BOTTOM_CENTER,
+      autoClose: 10000,
+    });
+    notify();
+    setContactEmail("");
+    setContactMessage("");
+    setContactName("");
+
+    // try {
+    //   const config = { headers: { "Content-Type": "multipart/form-data" } };
+
+    //   const { data } = await axios.post(`/api/v1/sendemail`, myform, config);
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (
@@ -163,6 +199,12 @@ const Home = () => {
               />
               <input type="submit" value="SEND" />
             </form>
+            <ToastContainer
+              style={{
+                backgroundColor: "black !important",
+                color: "black !important",
+              }}
+            />
           </div>
         </section>
       </div>

@@ -10,6 +10,7 @@ import { fetchProjects } from "../../features/projectSlice";
 import Particles from "../../particles/Particles.js";
 import axios from "axios";
 import "./Home.css";
+import Loader from "../layout/Loader.js";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -131,8 +132,12 @@ const Home = () => {
               </h6>
             </div>
             <div className="project-cards">
-              {projects &&
-                projects.map((project) => <ProjectCard project={project} />)}
+              {loading === "PENDING" ? (
+                <Loader />
+              ) : (
+                projects &&
+                projects.map((project) => <ProjectCard project={project} />)
+              )}
             </div>
           </div>
         </section>

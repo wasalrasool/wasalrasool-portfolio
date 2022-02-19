@@ -76,7 +76,7 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <Link to="/projects">
+            <Link to="/#projects">
               <button onClick={() => window.location.replace("/#projects")}>
                 {" "}
                 Projects

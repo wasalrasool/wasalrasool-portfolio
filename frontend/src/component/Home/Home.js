@@ -3,7 +3,6 @@ import LaptopManSvg from "../../svg/LaptopManSvg.js";
 import { Link } from "react-router-dom";
 import ProjectCard from "../Project/ProjectCard.js";
 import { useDispatch, useSelector } from "react-redux";
-// import { useAlert } from "react-alert";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MailManSvg from "../../svg/MailManSvg.js";
@@ -16,7 +15,6 @@ const Home = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchProjects());
-    // const { loading } = useSelector((state) => state.projects);
   }, [dispatch]);
 
   // only thing i understood dont use useEffect twice

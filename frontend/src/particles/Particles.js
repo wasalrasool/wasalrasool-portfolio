@@ -78,7 +78,7 @@ const Particlesjs = () => {
             enable: true,
             outMode: "bounce",
             random: false,
-            speed: 2,
+            speed: 1.6,
             straight: false,
           },
           number: {

@@ -141,6 +141,22 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        <section id="projects">
+          <div className="more-work">
+            <h6>
+              some more <span>work</span>
+            </h6>
+          </div>
+          <div className="all-projects">
+            {loading === "PENDING" ? (
+              <Loader />
+            ) : (
+              projects &&
+              projects.map((project) => <ProjectCard project={project} />)
+            )}
+          </div>
+        </section>
         <section className="github">
           {/* <div class="calendar">Loading the data just for you.</div> */}
         </section>

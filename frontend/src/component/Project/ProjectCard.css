@@ -26,8 +26,13 @@
 .project-card:hover {
   transform: scale(1.04);
 }
-/* @media screen and (max-width: 600px) {
+@media screen and (max-width: 1300px) {
   .project-card {
-    width: 22vmax;
+    width: 20vmax;
   }
-} */
+}
+@media screen and (max-width: 1100px) {
+  .project-card {
+    width: 27vmax;
+  }
+}

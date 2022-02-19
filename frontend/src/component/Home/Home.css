@@ -97,13 +97,16 @@ h6 {
   flex-direction: column;
   justify-content: flex-start;
 }
-.featured-work div {
+.featured-work div,
+.all-projects div {
   padding-top: 0.6vmax;
 }
 .featured-work .project-cards {
   display: flex;
   flex-wrap: wrap;
+  border: 1px solid red;
 }
+
 /* Form CSS */
 
 .contact {
@@ -172,6 +175,15 @@ input[type="submit"]:hover {
 .mail-man-svg {
   margin-top: 3vmax;
 }
+.all-projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 7vmax;
+  margin-right: 7vmax;
+  border: 1px solid red;
+}
 
 /* Media Queries --> Responsiveness */
 
@@ -210,7 +222,10 @@ input[type="submit"]:hover {
   }
   .about .featured-work {
     padding-top: 2vmax;
-    width: 100%;
+    width: 110%;
+    border: 1px solid red;
+    padding-left: 0 !important;
+    margin-left: -4vmax !important;
   }
   .project-cards {
     justify-content: center;
@@ -288,7 +303,12 @@ input[type="submit"]:hover {
   .project-card {
     width: 20rem;
   }
-
+  #projects {
+    flex-direction: column;
+    border: 1px solid red;
+    width: 100%;
+    margin-left: 8vmax;
+  }
   input,
   textarea {
     font-size: 20px;

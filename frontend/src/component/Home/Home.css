@@ -104,7 +104,6 @@ h6 {
 .featured-work .project-cards {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid red;
 }
 
 /* Form CSS */
@@ -182,7 +181,10 @@ input[type="submit"]:hover {
   flex-wrap: wrap;
   margin-left: 7vmax;
   margin-right: 7vmax;
-  border: 1px solid red;
+}
+.more-work {
+  margin-left: 10vmax;
+  padding: 3vmax;
 }
 
 /* Media Queries --> Responsiveness */
@@ -223,12 +225,15 @@ input[type="submit"]:hover {
   .about .featured-work {
     padding-top: 2vmax;
     width: 110%;
-    border: 1px solid red;
     padding-left: 0 !important;
     margin-left: -4vmax !important;
   }
   .project-cards {
     justify-content: center;
+  }
+  .more-work {
+    margin-left: 6vmax;
+    padding: 3vmax;
   }
 
   .contact {
@@ -305,9 +310,8 @@ input[type="submit"]:hover {
   }
   #projects {
     flex-direction: column;
-    border: 1px solid red;
-    width: 100%;
-    margin-left: 8vmax;
+    width: 98%;
+    /* margin-left: 8vmax; */
   }
   input,
   textarea {
@@ -346,5 +350,11 @@ input[type="submit"]:hover {
     transition: 0.3s all ease;
     margin-top: 14vmax;
     margin-bottom: 14vmax;
+  }
+  .more-work {
+    /* border: 1px solid red; */
+    width: 100%;
+    padding: 10vmax;
+    padding-left: 20vmax;
   }
 }

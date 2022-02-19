@@ -22,6 +22,10 @@ const Home = () => {
   // instea make the state slice lie that to be able to select
   const { projects, loading } = useSelector((state) => state.projects);
 
+  const feturedProjects = projects.filter((project) => {
+    return project.featured === true;
+  });
+
   // fetched the projects -- ok
 
   const [contactName, setContactName] = useState("");

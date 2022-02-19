@@ -16,8 +16,6 @@ const Home = () => {
   const dispatch = useDispatch();
   // const alert = useAlert();
   // alert.show("HELOOO");
-  const notify = () => toast("Wow so easy !");
-
   useEffect(() => {
     dispatch(fetchProjects());
     // const { loading } = useSelector((state) => state.projects);
@@ -63,7 +61,6 @@ const Home = () => {
       position: toast.POSITION.BOTTOM_CENTER,
       autoClose: 10000,
     });
-    notify();
     setContactEmail("");
     setContactMessage("");
     setContactName("");

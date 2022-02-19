@@ -27,14 +27,14 @@ const Particlesjs = () => {
           height: "50rem",
           position: "absolute",
           top: "7rem",
-          zIndex: "-5",
+          zIndex: "-100",
           objectFit: "fit-content",
         },
         fpsLimit: 120,
         interactivity: {
           events: {
             onClick: {
-              enable: true,
+              enable: false,
               mode: "push",
             },
             onHover: {

@@ -13,6 +13,8 @@ export const fetchProjects = createAsyncThunk(
 let initialState = {
   loading: null,
   projects: null,
+  featuredProjects: null,
+  nonFeaturedProjects: null,
 };
 
 const projectSlice = createSlice({
@@ -27,7 +29,21 @@ const projectSlice = createSlice({
     },
     [fetchProjects.fulfilled]: (state, actions) => {
       state.loading = HTTP_STATUS.FULFILLED;
+
       state.projects = actions.payload;
+
+      const nonFeaturedProjects = actions.payload.filter((project) => {
+        return project.featured === false;
+      });
+      state.nonFeaturedProjects = nonFeaturedProjects;
+
+      const featuredProjects = [];
+      state.projects.map((project) => {
+        if (project.featured === true) {
+          featuredProjects.push(project);
+        }
+      });
+      state.featuredProjects = featuredProjects;
     },
     [fetchProjects.rejected]: (state) => {
       state.projects = HTTP_STATUS.REJECTED;

@@ -28,6 +28,17 @@ exports.emailSender = catchAssyncError(async (req, res, next) => {
   } catch (error) {
     console.log(error);
   }
+
+  // try {
+  //   await sendEmail({
+  //     email: email,
+  //     subject: `Thank you for reaching me`,
+  //     message:
+  //       "I have received your message, \n\n will reply you as soon as possible.",
+  //   });
+  // } catch (error) {
+  //   console.log(error);
+  // }
 });
 
 exports.registerUser = catchAssyncError(async (req, res, next) => {

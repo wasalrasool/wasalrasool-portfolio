@@ -20,17 +20,22 @@ const Home = () => {
 
   // only thing i understood dont use useEffect twice
   // instea make the state slice lie that to be able to select
-  const { projects, loading } = useSelector((state) => state.projects);
-
-  const featuredProjects = projects.filter((project) => {
-    return project.featured === true;
-  });
+  const { loading, featuredProjects, nonFeaturedProjects } = useSelector(
+    (state) => state.projects
+  );
 
   // fetched the projects -- ok
 
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactMessage, setContactMessage] = useState("");
+
+  // const featuredProjects = [];
+  // projects.map((project) => {
+  //   if (project.featured === true) {
+  //     featuredProjects.push(project);
+  //   }
+  // });
 
   const contactSubmitHandler = (e) => {
     e.preventDefault();
@@ -158,8 +163,10 @@ const Home = () => {
             {loading === "PENDING" ? (
               <Loader />
             ) : (
-              projects &&
-              projects.map((project) => <ProjectCard project={project} />)
+              nonFeaturedProjects &&
+              nonFeaturedProjects.map((project) => (
+                <ProjectCard project={project} />
+              ))
             )}
           </div>
         </section>

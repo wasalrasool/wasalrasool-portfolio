@@ -14,8 +14,6 @@ import "./Home.css";
 
 const Home = () => {
   const dispatch = useDispatch();
-  // const alert = useAlert();
-  // alert.show("HELOOO");
   useEffect(() => {
     dispatch(fetchProjects());
     // const { loading } = useSelector((state) => state.projects);
@@ -48,7 +46,7 @@ const Home = () => {
     axios
       .post(url, myForm, config)
       .then((response) => {
-        console.log(response);
+        // console.log(response);
       })
       .catch((error) => {
         // console.log(error);
@@ -64,14 +62,6 @@ const Home = () => {
     setContactEmail("");
     setContactMessage("");
     setContactName("");
-
-    // try {
-    //   const config = { headers: { "Content-Type": "multipart/form-data" } };
-
-    //   const { data } = await axios.post(`/api/v1/sendemail`, myform, config);
-    // } catch (error) {
-    //   console.log(error);
-    // }
   };
 
   return (

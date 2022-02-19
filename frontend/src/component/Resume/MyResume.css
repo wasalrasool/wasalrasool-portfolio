@@ -25,6 +25,9 @@
   margin-top: 3vmax;
   margin-bottom: 7vmax;
 }
+.disabled-btn {
+  cursor: not-allowed;
+}
 .download-icon {
   color: black;
   margin-right: 7px;

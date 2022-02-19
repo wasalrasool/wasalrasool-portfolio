@@ -1,6 +1,5 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 import FileDownload from "js-file-download";
 import "./MyResume.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,12 +7,17 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import ResumeSvg from "../../svg/ResumeSvg";
 
 const MyResume = () => {
+  const [disable, setDisabled] = useState(false);
+
   const downloadHandler = async (e) => {
     e.preventDefault();
+    setDisabled(true);
 
     await axios.get("/api/v1/download/resume").then((res) => {
       FileDownload(res.data, "resume.pdf");
     });
+
+    setDisabled(false);
   };
   return (
     <Fragment>
@@ -27,6 +31,7 @@ const MyResume = () => {
       </div>
       <div className="download">
         <button
+          disabled={disable}
           className="blue-c-btn"
           onClick={(e) => {
             downloadHandler(e);

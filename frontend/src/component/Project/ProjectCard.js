@@ -1,20 +1,39 @@
 import React from "react";
 import "./ProjectCard.css";
-import Background from "../Project/background.png";
 
 const ProjectCard = ({ project }) => {
-  var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-  randomColor = "#" + randomColor;
-  var randomColor2 = Math.floor(Math.random() * 16777215).toString(16);
-  randomColor2 = "#" + randomColor2;
-  var randomColor3 = Math.floor(Math.random() * 16777215).toString(16);
-  randomColor3 = "#" + randomColor3;
+  const colorSet = {
+    randomColor: "",
+    randomColor2: "",
+    randomColor3: "",
+  };
+
+  const randomColorGenerator = () => {
+    colorSet.randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    colorSet.randomColor = "#" + colorSet.randomColor;
+    //
+    colorSet.randomColor2 = Math.floor(Math.random() * 16777215).toString(16);
+    colorSet.randomColor2 = "#" + colorSet.randomColor2;
+    //
+    colorSet.randomColor3 = Math.floor(Math.random() * 16777215).toString(16);
+    colorSet.randomColor3 = "#" + colorSet.randomColor3;
+  };
+
+  randomColorGenerator();
+
+  if (
+    colorSet.randomColor === "#000000" &&
+    colorSet.randomColor2 === "#000000" &&
+    colorSet.randomColor3 === "#000000"
+  ) {
+    randomColorGenerator();
+  }
+
   return (
     <div
       style={{
-        backgroundImage: `url(${Background})`,
         objectFit: "contain",
-        backgroundImage: `linear-gradient(to bottom right, ${randomColor}, ${randomColor2},${randomColor3})`,
+        backgroundImage: `linear-gradient(to bottom right, ${colorSet.randomColor}, ${colorSet.randomColor2},${colorSet.randomColor3})`,
       }}
       className="project-card"
     >

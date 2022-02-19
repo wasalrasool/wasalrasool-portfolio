@@ -25,7 +25,6 @@ const Home = () => {
   const featuredProjects = projects.filter((project) => {
     return project.featured === true;
   });
-  console.log(featuredProjects);
 
   // fetched the projects -- ok
 

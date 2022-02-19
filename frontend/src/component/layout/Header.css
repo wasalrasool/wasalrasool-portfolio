@@ -77,6 +77,12 @@ li:hover button {
     margin-right: 28vmax;
     width: 32vmax;
   }
+  /* .logo {
+    width: 50%;
+  }
+  .LogoBox {
+    width: 50% !important;
+  } */
   .show-links {
     display: block;
     transform: translateX(0%);

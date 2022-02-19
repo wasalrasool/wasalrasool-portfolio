@@ -22,9 +22,10 @@ const Home = () => {
   // instea make the state slice lie that to be able to select
   const { projects, loading } = useSelector((state) => state.projects);
 
-  const feturedProjects = projects.filter((project) => {
+  const featuredProjects = projects.filter((project) => {
     return project.featured === true;
   });
+  console.log(featuredProjects);
 
   // fetched the projects -- ok
 
@@ -139,8 +140,10 @@ const Home = () => {
               {loading === "PENDING" ? (
                 <Loader />
               ) : (
-                projects &&
-                projects.map((project) => <ProjectCard project={project} />)
+                featuredProjects &&
+                featuredProjects.map((project) => (
+                  <ProjectCard project={project} />
+                ))
               )}
             </div>
           </div>
@@ -209,12 +212,7 @@ const Home = () => {
               />
               <input type="submit" value="SEND" />
             </form>
-            <ToastContainer
-              style={{
-                backgroundColor: "black !important",
-                color: "black !important",
-              }}
-            />
+            <ToastContainer />
           </div>
         </section>
       </div>

@@ -12,6 +12,11 @@ const projectSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please enter Project description"],
   },
+  featured: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
   images: [
     {
       public_id: {

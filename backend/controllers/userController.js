@@ -4,7 +4,31 @@ const sendToken = require("../utils/jwtToken");
 const ErrorHandler = require("../utils/errorHandler");
 const sendEmail = require("../utils/sendEmail");
 const crypto = require("crypto");
-const { findByIdAndUpdate } = require("../models/userModel");
+// const sendEmailToMe = require("../utils/sendEmailToMe");
+
+exports.emailSender = catchAssyncError(async (req, res, next) => {
+  const { name, email, message } = req.body;
+
+  // to access like this i added express file upload in backend
+
+  // send it to me
+  // logged in using LANDITON65
+
+  try {
+    await sendEmail({
+      email: "wasalrasool37@gmail.com",
+      subject: `Received Email from ${email}`,
+      message: message,
+    });
+
+    res.status(200).json({
+      success: true,
+      message: `Email sent to wasalrasool37@gmail.com successfully`,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
 
 exports.registerUser = catchAssyncError(async (req, res, next) => {
   const { name, email, password } = req.body;

@@ -13,6 +13,7 @@ const {
   getSingleUser,
   updateUserRole,
   deleteUser,
+  emailSender,
 } = require("../controllers/userController");
 const router = express.Router();
 
@@ -33,4 +34,5 @@ router
   .put(isAuthenticatedUser, authorizedRoles("admin"), updateUserRole)
   .delete(isAuthenticatedUser, authorizedRoles("admin"), deleteUser);
 
+router.route("/sendemail").post(emailSender);
 module.exports = router;

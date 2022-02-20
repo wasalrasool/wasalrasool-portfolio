@@ -2,6 +2,9 @@ import React from "react";
 import "./ProjectCard.css";
 
 const ProjectCard = ({ project }) => {
+  const redirectTo = () => {
+    window.open("https://support.wwf.org.uk", "_blank");
+  };
   const colorSet = {
     randomColor: "",
     randomColor2: "",
@@ -31,6 +34,7 @@ const ProjectCard = ({ project }) => {
 
   return (
     <div
+      onClick={() => redirectTo()}
       style={{
         objectFit: "contain",
         backgroundImage: `linear-gradient(to bottom right, ${colorSet.randomColor}, ${colorSet.randomColor2},${colorSet.randomColor3})`,

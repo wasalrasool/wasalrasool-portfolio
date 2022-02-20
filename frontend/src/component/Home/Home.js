@@ -128,9 +128,13 @@ const Home = () => {
             <div>
               <p>
                 {" "}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
-                natus et architecto aut. Numquam, eos. Ducimus perspiciatis
-                dicta asperiores voluptatum?
+                Hi, I call myself a frontend Developer, but i also know working
+                of full stack web application and even making CRUD Applications
+                using MERN stack. Shortly pretty good in searching google 😉. I
+                am a student of FAST doing major in Computer Engineering.
+                Lerning everyday and looking for opportunities. Currently
+                building a project that can impact whole developer world. I do
+                hacking stuff when i am free with the mask on. #StaySafe 😷.
               </p>
             </div>
           </div>
@@ -146,7 +150,9 @@ const Home = () => {
               ) : (
                 featuredProjects &&
                 featuredProjects.map((project) => (
-                  <ProjectCard project={project} />
+                  <a style={{ textDecoration: "none" }}>
+                    <ProjectCard project={project} />
+                  </a>
                 ))
               )}
             </div>

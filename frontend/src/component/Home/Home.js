@@ -150,9 +150,7 @@ const Home = () => {
               ) : (
                 featuredProjects &&
                 featuredProjects.map((project) => (
-                  <a style={{ textDecoration: "none" }}>
-                    <ProjectCard project={project} />
-                  </a>
+                  <ProjectCard project={project} />
                 ))
               )}
             </div>

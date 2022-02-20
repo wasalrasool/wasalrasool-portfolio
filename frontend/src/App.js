@@ -9,6 +9,7 @@ import NotFound from "./component/NotFound/NotFound.js";
 import MyResume from "./component/Resume/MyResume.js";
 
 function App() {
+  window.addEventListener("contextmenu", (e) => e.preventDefault());
   return (
     <Router>
       <Header />

@@ -3,10 +3,13 @@ const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const errorMiddleware = require("./Middleware/error");
 const fileUpload = require("express-fileupload");
+const path = require("path");
 
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
-dotenv.config({ path: "backend/config/config.env" });
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  dotenv.config({ path: "backend/config/config.env" });
+}
 
 const app = express();
 
@@ -22,6 +25,12 @@ const resumeRoutes = require("./routes/resumeRoutes");
 app.use("/api/v1", projectRoutes);
 app.use("/api/v1", userRoutes);
 app.use("/api/v1", resumeRoutes);
+
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend/build/index.html"));
+});
 
 app.use(errorMiddleware);
 

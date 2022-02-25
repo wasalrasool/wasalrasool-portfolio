@@ -325,6 +325,10 @@ input[type="submit"]:hover {
   .project-cards {
     margin-left: -2vmax;
   }
+  input,
+  textarea {
+    width: 45vmax !important;
+  }
 }
 
 @media screen and (max-width: 600px) {

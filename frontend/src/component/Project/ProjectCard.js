@@ -3,7 +3,7 @@ import "./ProjectCard.css";
 
 const ProjectCard = ({ project }) => {
   const redirectTo = () => {
-    window.open("https://support.wwf.org.uk", "_blank");
+    window.open(project.link, "_blank");
   };
   const colorSet = {
     randomColor: "",
